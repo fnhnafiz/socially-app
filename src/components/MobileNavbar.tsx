@@ -67,7 +67,7 @@ function MobileNavbar() {
                   className="flex items-center gap-3 justify-start"
                   asChild
                 >
-                  <Link href="/notifications">
+                  <Link href="/notification">
                     <BellIcon className="w-4 h-4" />
                     Notifications
                   </Link>
