@@ -8,13 +8,14 @@ import { notFound } from "next/navigation";
 import React from "react";
 import ProfileClient from "../ProfileClient";
 
-interface ProfilePageProps {
+// ✅ Correct Type: matches what Next.js expects in the App Router
+type Props = {
   params: {
     username: string;
   };
-}
+};
 
-export default async function ProfilePage({ params }: ProfilePageProps) {
+export default async function ProfilePage({ params }: Props) {
   const user = await getUserProfileByUsername(params.username);
   if (!user) return notFound();
 
