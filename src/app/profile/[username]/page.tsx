@@ -24,8 +24,11 @@ import ProfileClient from "../ProfileClient";
 //   };
 // }
 
-async function ProfilePage({ params }: { params: { username: string } }) {
-  //   console.log("this is params user:", params);
+export default async function ProfilePage({
+  params,
+}: {
+  params: { username: string };
+}) {
   const user = await getUserProfileByUsername(params.username);
   if (!user) notFound();
 
@@ -36,6 +39,7 @@ async function ProfilePage({ params }: { params: { username: string } }) {
   ]);
 
   await new Promise((resolve) => setTimeout(resolve, 3000));
+
   return (
     <ProfileClient
       user={user}
@@ -45,5 +49,3 @@ async function ProfilePage({ params }: { params: { username: string } }) {
     />
   );
 }
-
-export default ProfilePage;
