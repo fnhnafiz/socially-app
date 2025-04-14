@@ -8,37 +8,21 @@ import { notFound } from "next/navigation";
 import React from "react";
 import ProfileClient from "../ProfileClient";
 
-// export async function genarateMetadata({
-//   params,
-// }: {
-//   params: { username: string };
-// }) {
-//   const user = await getUserProfileByUsername(params.username);
-//   console.log("user for genaratemetadat", user);
-//   if (!user) {
-//     return;
-//   }
-//   return {
-//     title: `${user.name ?? user.username}`,
-//     description: "A user can write his BIO",
-//   };
-// }
+interface ProfilePageProps {
+  params: {
+    username: string;
+  };
+}
 
-export default async function ProfilePage({
-  params,
-}: {
-  params: { username: string };
-}) {
+export default async function ProfilePage({ params }: ProfilePageProps) {
   const user = await getUserProfileByUsername(params.username);
-  if (!user) notFound();
+  if (!user) return notFound();
 
   const [posts, likedPosts, isCurrentUserFollowing] = await Promise.all([
     getAllUserPost(user.id),
     getUserLikedPosts(user.id),
     isFollowing(user.id),
   ]);
-
-  await new Promise((resolve) => setTimeout(resolve, 3000));
 
   return (
     <ProfileClient
