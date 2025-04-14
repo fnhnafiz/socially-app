@@ -145,6 +145,8 @@ function PostCard({ post, dbUserId }: { post: Post; dbUserId: string | null }) {
           {post.image && (
             <div className="rounded-lg overflow-hidden">
               <Image
+                width={500}
+                height={500}
                 src={post.image}
                 alt="Post content"
                 className="w-full h-auto object-cover"

@@ -10,12 +10,12 @@ export default async function HomePage() {
   const user = await currentUser();
   const posts = await getAllPost();
   const dbUserId = await getDbUserId();
-  console.log({ posts });
+  // console.log({ posts });
   return (
     <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
       <div className="lg:col-span-6">
         {user ? <CreatePost /> : null}
-        <div>
+        <div className="space-y-4">
           {posts.map((post) => {
             return <PostCard key={post.id} post={post} dbUserId={dbUserId} />;
           })}
