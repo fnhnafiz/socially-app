@@ -102,8 +102,13 @@ import ProfileClient from "../ProfileClient";
 //   };
 // }
 
-export async function generateMetadata({ params }: any) {
-  const user = await getUserProfileByUsername(params?.username);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ username: string }>;
+}) {
+  const username = (await params).username;
+  const user = await getUserProfileByUsername(username);
   if (!user) return;
 
   return {
@@ -111,9 +116,14 @@ export async function generateMetadata({ params }: any) {
     description: user.bio || `Check out ${user.username}'s profile.`,
   };
 }
-
-async function ProfilePageServer({ params }: any) {
-  const user = await getUserProfileByUsername(params.username);
+// params: Promise<{ slug: string }>
+async function ProfilePageServer({
+  params,
+}: {
+  params: Promise<{ username: string }>;
+}) {
+  const username = (await params).username;
+  const user = await getUserProfileByUsername(username);
 
   if (!user) notFound();
 
