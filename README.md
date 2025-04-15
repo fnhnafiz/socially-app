@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 MINGLO – A Modern Social Platform
 
-## Getting Started
+## Live Preview
 
-First, run the development server:
+🔗 [Visit MINGLO Live](https://socially-app-i9qx.vercel.app/notification)
+
+## About MINGLO
+
+MINGLO is a cutting-edge social platform designed to bring people together through engaging conversations and meaningful connections. With a clean interface, dynamic theme toggling, and seamless authentication, **MINGLO** ensures a smooth user experience for everyone.
+
+### Key Features
+
+**Dynamic Theme Toggle** – Switch between light & dark modes effortlessly  
+ **Post & Engage** – Share your thoughts and interact with comments & likes  
+ **Real-time Notifications** – Stay updated with follower activity  
+ **Secure Authentication** – Powered by **Clerk**, ensuring seamless login & registration  
+ **Scalable Database** – Using **PostgreSQL & Prisma** for efficient data management
+
+## Tech Stack
+
+- **Framework:** Next.js (React)
+- **Language:** TypeScript
+- **Database:** PostgreSQL & Prisma ORM
+- **Authentication:** Clerk
+- **Hosting:** Vercel
+
+## Installation & Setup
+
+Clone the repository and follow the steps below:
 
 ```bash
+git clone  https://github.com/fnhnafiz/socially-app
+cd minglo
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Future Enhancements
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Integrating AI-powered content moderation  
+ Adding a **messaging** feature for real-time communication  
+ Improving mobile responsiveness & accessibility
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contribute
 
-## Learn More
+Feel free to contribute! Open issues, suggest features, or submit pull requests.
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Email: your-email@example.com  
+ LinkedIn: [Nafiz Hossain](https://www.linkedin.com/in/fnh-nafiz/)
