@@ -1,5 +1,9 @@
 # 🌟 MINGLO – A Modern Social Platform
 
+## Usage
+
+After creating an account on Minglo, please write a post or leave a comment to start interacting!
+
 ## Live Preview
 
 🔗 [Visit MINGLO Live](https://socially-app-i9qx.vercel.app/notification)
@@ -11,7 +15,7 @@ MINGLO is a cutting-edge social platform designed to bring people together throu
 ### Key Features
 
 **Dynamic Theme Toggle** – Switch between light & dark modes effortlessly  
- **Post & Engage** – Share your thoughts and interact with comments & likes  
+ **Post & Engage** – Share your thoughts & interact with comments & likes  
  **Real-time Notifications** – Stay updated with follower activity  
  **Secure Authentication** – Powered by **Clerk**, ensuring seamless login & registration  
  **Scalable Database** – Using **PostgreSQL & Prisma** for efficient data management
@@ -19,6 +23,7 @@ MINGLO is a cutting-edge social platform designed to bring people together throu
 ## Tech Stack
 
 - **Framework:** Next.js (React)
+- **UI Components:** Shadcn UI
 - **Language:** TypeScript
 - **Database:** PostgreSQL & Prisma ORM
 - **Authentication:** Clerk
@@ -41,9 +46,9 @@ Integrating AI-powered content moderation
  Adding a **messaging** feature for real-time communication  
  Improving mobile responsiveness & accessibility
 
-## Contribute
+### New Feature
 
-Feel free to contribute! Open issues, suggest features, or submit pull requests.
+Minglo now supports real-time chat between users. Try it out after you log in!
 
 ## Contact
 
